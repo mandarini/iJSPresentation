@@ -1,0 +1,19 @@
+<div id="s_12">
+	<h4>script loading</h4>
+	<h4 class="fragment">2_async</h4>
+	<p class="fragment">You can load the script <span class="highlighted">asynchronously</span>.</p>
+	<p class="fragment">In this case, you have to add a callback function, as shown in the example
+	from the Google Maps JS API docs: </p>
+	<pre class="fragment full">
+			<code class="hljs small-code" data-trim contenteditable>
+				<script
+				src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"
+				 async defer>
+			 </script>
+			</code>
+	</pre>
+<p class="fragment small-letters">
+ When the script is loaded, it will search a global function, named here <code class="code-part">initMap</code>, to execute it.
+ In the scope of this function, the <code class="code-part">google.maps</code> object will be available.
+</p>
+</div>

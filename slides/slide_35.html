@@ -1,0 +1,21 @@
+<div id="s_35">
+    <h4>points - shapes</h4>
+    <pre>
+        <code class="hljs small-code" data-trim contenteditable>
+
+        const antenna = new maps.MarkerImage('path-to-image/marker-image.png');
+
+        this.http.get('path-to-file/file.json').subscribe(data => {
+            this.masts = data['data'];
+
+            this.masts.map(x => {
+                new maps.Marker({
+                position: new maps.LatLng(x[18], x[17]),
+                icon: antenna,
+                size: new maps.Size(30, 30),
+                map: this.map
+                });
+            });
+        </code>
+    </pre>
+</div>

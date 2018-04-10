@@ -1,0 +1,23 @@
+<div id="s_14">
+	<h4><span class="highlighted">dynamic</span> script loading</h4>
+	<p class="fragment"><strong>How to</strong> in Angular?</p>
+	<p class="fragment">
+		We create a service that loads the script!
+	</p>
+	<pre class="fragment">
+		<code class="hljs small-code" data-trim contenteditable>
+			public loadScript(url, id, c): void {
+		    if (!document.getElementById(id)) {
+		      const script = document.createElement('script');
+		      script.type = 'text/javascript';
+		      script.src = url;
+		      script.id = id;
+		      script.addEventListener('load', function (e) {
+		         c(null, e);
+		      }, false);
+		      document.head.appendChild(script);
+		    }
+		  }
+		</code>
+	</pre>
+</div>

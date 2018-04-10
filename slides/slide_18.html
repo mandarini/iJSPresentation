@@ -1,0 +1,46 @@
+<div id="s_18">
+	<h4>the full component code</h4>
+	<pre>
+		<code class="hljs small-code" data-trim contenteditable>
+			import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+			import { ScriptLoadService } from '../script-load.service';
+
+			const your_API_key = 'xxx';
+			const url = 'https://maps.googleapis.com/maps/api/js?key=' + your_API_key;
+
+			@Component({
+			  selector: 'app-g-map',
+			  templateUrl: './g-map.component.html',
+			  styleUrls: ['./g-map.component.css']
+			})
+			export class GMapComponent implements AfterViewInit  {
+
+			  @ViewChild('mapElement') mapElm: ElementRef;
+
+			  private map: any;
+
+			  constructor(private load: ScriptLoadService) {
+			  }
+
+			  ngAfterViewInit(): void {
+
+			    this.load.loadScript(url, 'gmap',() => {
+			      const maps = window['google']['maps'];
+			      const loc = new maps.LatLng(38, 23);
+			      this.map = new maps.Map(this.mapElm.nativeElement, {
+			        zoom: 11,
+			        center: loc,
+			        scrollwheel: true,
+			        panControl: false,
+			        mapTypeControl: false,
+			        zoomControl: true,
+			        streetViewControl: false,
+			        scaleControl: true,
+			      });
+					});
+				}
+
+			}
+		</code>
+	</pre>
+</div>

@@ -1,0 +1,25 @@
+<div id="s_11">
+	<h4>script loading</h4>
+	<p class="fragment">There are two ways, thus, to know when your script is loaded.</p>
+	<h4 class="fragment">1_sync</h4>
+	<p class="fragment">You can load the script <span class="highlighted">synchronously</span>.
+		<ul class="fragment small-letters">
+			<li>
+				rest of your code waits for the script to be loaded
+			</li>
+			<li>
+				when it's executed the global object is defined.
+			</li>
+		</ul>
+	</p>
+
+	<pre class="fragment">
+			<code class="hljs small-code" data-trim>
+					<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+			</code>
+	</pre>
+<p class="fragment small-letters">
+	This is not advisable, since it can slow down your app, and in the case the script is never loaded,
+	well, then a great bit of your app is never loaded.
+</p>
+</div>

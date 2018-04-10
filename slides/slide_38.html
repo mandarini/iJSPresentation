@@ -1,0 +1,24 @@
+<div id="s_38">
+    <h4>points - values - heatmap</h4>
+    <pre>
+        <code class="hljs small-code" data-trim contenteditable>
+      this.http.get('assets/letting.json').subscribe(data => {
+        this.lettings = data['data'];
+        const heatmapData = [];
+        this.lettings.map(x => {
+          heatmapData.push({
+            location: new maps.LatLng(x[24], x[23]),
+            weight: parseInt(x[15], 10)
+          });
+        });
+        const heatmap = new maps.visualization.HeatmapLayer({
+          data: heatmapData
+        });
+        heatmap.set('gradient', customGradient);
+        heatmap.set('radius', 70);
+        heatmap.set('opacity', 1);
+        heatmap.setMap(this.map);
+      });
+        </code>
+    </pre>
+</div>
