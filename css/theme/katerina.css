@@ -9,13 +9,19 @@
  * For other themes, change $codeBackground accordingly.
  *
  */
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:100,300,700,300italic,700italic);
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #222;
-  background-color: #222; }
+  background: black;
+  background: -moz-radial-gradient(center, circle cover, #231111 0%, black 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #231111), color-stop(100%, black));
+  background: -webkit-radial-gradient(center, circle cover, #231111 0%, black 100%);
+  background: -o-radial-gradient(center, circle cover, #231111 0%, black 100%);
+  background: -ms-radial-gradient(center, circle cover, #231111 0%, black 100%);
+  background: radial-gradient(center, circle cover, #231111 0%, black 100%);
+  background-color: #000; }
 
 .reveal {
   font-family: Ubuntu, "sans-serif";
@@ -54,7 +60,7 @@ body {
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
-  text-shadow: 2px 2px 2px #222;
+  text-shadow: 2px 2px 2px #191919;
   word-wrap: break-word; }
 
 .reveal h1 {
@@ -267,8 +273,7 @@ body {
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 .reveal p {
-  font-weight: 300;
-  text-shadow: 1px 1px #222; }
+  font-weight: 100; }
 
 .reveal h1,
 .reveal h2,
