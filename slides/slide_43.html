@@ -1,9 +1,23 @@
 <div id="s_43">
   <h4>color change</h4>
-<p>
+<p class="small-letters fragment parts">
   note how you can choose the map features you want and color them accordingly.
 </p>
-<p>
+<p class="small-letters fragment parts">
   you can hide and show features such as points of interest, businesses, color the sea green and the roads red.
 </p>
+<pre class="fragment">
+    <code class="hljs small-code" data-trim contenteditable>
+{
+  featureType: 'water',
+  elementType: 'geometry.fill',
+  stylers: [{color: '#00ff00'}]
+},
+{
+  featureType: 'road.highway',
+  elementType: 'geometry',
+  stylers: [{color: '#ff0000'}]
+},
+</code>
+</pre>
 </div>
