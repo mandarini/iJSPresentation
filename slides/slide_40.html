@@ -10,4 +10,11 @@
 </em> based on the distance between them</p>
 <p class="small-letters fragment parts" data-fragment-index="3">
 you may <span class="highlighted">specify the grid size</span> to create larger or smaller clusters according to what you need to visualize</p>
+<pre class="fragment parts"  style="width: 100%;">
+<code class="hljs small-code" data-trim contenteditable>
+const MarkerClusterer = window["MarkerClusterer"];
+let markerCluster = new MarkerClusterer(this.map, this.markers, {imagePath: 'assets/m'});
+markerCluster.setGridSize(clust);
+</code>
+</pre>
 </div>
