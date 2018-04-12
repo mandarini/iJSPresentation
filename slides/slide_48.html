@@ -1,6 +1,21 @@
 <div id="s_48">
-    <h4>the <a href="https://mandarini.github.io/mapp/ol" target="_blank" rel="noopener">map</a></h4>
-    <iframe style="background-color: white;" src="https://mandarini.github.io/mapp/" title="iframe of plain map" width="100%" height="400">
-        <p>Your browser does not support iframes.</p>
-    </iframe>
+  <h4>toolsets - default</h4>
+  <p class="small-letters fragment parts">
+  using these default modes, you can create your own custom tools!
+  </p>
+  <pre class="fragment">
+      <code class="hljs small-code" data-trim contenteditable>
+      <div id="draw-buttons">
+        <img src="assets/point.png" (click)="draw('marker')"/>
+        <img src="assets/polygon.png" (click)="draw('polygon')"/>
+        <img src="assets/square.png" (click)="draw('square')"/>
+        <img src="assets/line.png" (click)="draw('polyline')"/>
+        <img src="assets/circle.png" (click)="draw('circle')"/>
+        <img src="assets/cat.png" (click)="draw('cat')"/>
+        <img src="assets/pan.png" (click)="draw('pan')"/>
+        <img src="assets/save.png" (click)="draw('save')"/>
+      </div>
+    </code>
+  </pre>
+  <img class="fragment parts" src="./images/custom.png" width="45%">
 </div>

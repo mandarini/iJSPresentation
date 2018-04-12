@@ -1,3 +1,24 @@
 <div id="s_46">
-    <h4>interactions</h4>
+    <h4>drawing</h4>
+    <p class="small-letters fragment parts">
+      all you need is the drawing library
+    </p>
+    <p class="small-letters fragment parts">
+      at the end of your google maps URL, append <code class="code-part">'&libraries=drawing'</code>
+    </p>
+    <p class="small-letters fragment parts">
+      initialize the DrawingManager, and add it to your map!
+      <pre class="fragment">
+          <code class="hljs small-code" data-trim contenteditable>
+            let drawingManager = new maps.drawing.DrawingManager({
+              drawingMode: null,
+              drawingControl: false
+            });
+            drawingManager.setMap(this.map);
+          </code>
+        </pre>
+    </p>
+    <p class="small-letters fragment parts">
+    <code class="code-part">drawingControl: false</code> because we'll be creating our own custom toolset!
+  </p>
 </div>
